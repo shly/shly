@@ -1,0 +1,512 @@
+/*begin reset css, 清除body、h1、ul、li以及a标签的所有默认样式*/
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    padding: 0;
+	margin: 0;
+	/* 默认颜色为灰色 */
+	color:#666666;
+}
+h1,h2{
+	margin: 0;
+	padding: 0;
+}
+
+ul{
+ 	list-style: none;
+	padding-left: 0px;
+	margin: 0;
+}
+li{
+	margin: 0px;
+}
+
+a{
+	text-decoration: none;
+	color:#666666;
+}
+/*end reset css，清除默认样式结尾*/
+
+/* Begin: 基础组件的样式定义 */
+/*设置顶部header模块的样式，高度50px，白色背景色，内外边距为0px，行间距为50px*/
+header{
+	margin: 0px;
+	padding: 0px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #fff;
+}
+
+/*设置左侧导航栏模块的样式，宽度固定180px，背景色#3a536e，向左浮动，
+最小高度为800px，否则出现滚动条，默认字体颜色为#8da4ba*/
+aside{
+	width: 180px;
+	float: left;
+	background-color: #3a536e;
+	color: #8da4ba;
+	min-height: 800px;
+
+}
+
+/*设置右侧模块的父容器样式，最小宽度960px，最小高度为800px，否则出现滚动条，
+背景色#e7eaec，向左浮动180px，边框为实线，1px*/
+div.container{
+	margin-left: 180px;
+	background-color: #e7eaec;
+	border: 1px solid #e7eaec;
+	min-width: 960px;
+	min-height: 800px;
+}
+
+/*设置右侧模块的内容部分样式，宽度为container的98%，居中显示，
+背景色纯白，最小高度720px，否则出现滚动条*/
+div.content{
+	width: 98%;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	min-height: 720px;
+}
+/* End: 基础组件的样式定义 */
+
+/* Begin: Headler组件的样式定义 */
+/* header模块的h1样式，字体大小14px，左侧外边距为30px，向左浮动，宽度100px*/
+header h1{
+	font-size: 14px;
+	margin-left: 30px;
+	width: 100px;
+	float: left;
+}
+
+/* header模块class为tools的ul样式，右浮动，右侧外边距20px*/
+header ul.tools{
+	float: right;
+	margin-right: 20px;
+}
+
+/* header模块class为tools的ul的li标签样式，将对象显示为内联对象，块级元素，但在同一行显示*/
+header ul.tools>li{
+	display: inline-block;
+}
+
+/* 单独为研发环境指定样式*/
+li.developmentEnvironment{
+	border-left: 1px solid #edeff1;
+	border-right: 1px solid #edeff1;
+	padding: 0px 30px;
+	margin-left: 40px;
+}
+
+/* 利用after选择器为公司标签指定图标，使用背景图片定位的方式 */
+.company>a:after{
+	content: "";
+	display: inline-block;
+	width: 7px;
+	height: 4px;
+	background-image: url(../images/arrow.png);
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+/* 利用after选择器为研发环节后面指定图标 */
+.developmentEnvironment>a:after{
+	content: "";
+	background-image: url(../images/back_01.png);
+	background-position: -400px 0px;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	overflow: hidden;
+	vertical-align:text-top;
+	margin-left: 4px;
+}
+
+/* 为右侧三个图标指定统一样式，并通过margin-top来调整与前面研发环节和公司的水平位置*/
+.file a,.warm a,.user a{
+	display: inline-block;
+	width: 29px;
+	height: 25px;
+	overflow: hidden;
+	vertical-align:text-top;
+	margin-left: 25px;
+	margin-top : -5px;
+}
+
+/* 定义文件保存的背景图片*/
+.file a{
+	background-image: url(../images/file_01.png);
+	background-position: 0px 0px;
+	background-size:  29px 25px;
+}
+
+/* 定义警告提醒的背景图片*/
+.warm a{
+	background-image: url(../images/warm_01.png);
+	background-position: 0px 0px;
+	background-size: 29px 25px;
+}
+
+/* 定义用户头像的背景图片*/
+.user a{
+	background-image: url(../images/user.png);
+	background-position: 0px 0px;
+	background-size: 29px 25px;
+
+}
+/* End: Headler组件的样式定义 */
+
+/*Begin: 左侧导航栏样式定义*/
+/* 定义导航栏标签中的ul li标签的高度，行间距和光标类型为指示链接的指针*/
+aside ul li{
+	height: 36px;
+	line-height: 36px;
+	cursor: pointer;
+}
+
+/* 定义导航栏标签中的ul li标签鼠标覆盖时的样式 */
+aside ul li:hover{
+	background-color: #334f6c;
+}
+
+/* 定义导航栏标签中的ul li标签中活动的里的样式，后期可以通过js来动态控制具体哪个li设置active的class属性 */
+aside ul li.active{
+	background-color:#2a4663;
+	height: 36px;
+	color: #FFFFFF;
+}
+
+/* 定义导航栏标签中的ul li中文字的样式 */
+aside ul li span{
+	margin-left: 30px;
+	margin-right: 10px;
+}
+
+/* 设置导航栏图标的样式 */
+.rectangle{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-image: url(../images/rectangle.png);
+	background-repeat: no-repeat;
+	float: right;
+	margin: 5px 2px;
+}
+/*End: 左侧导航栏样式定义*/
+
+/*end conponent*/
+nav{
+	background-color: #e7eaec;
+	height: 35px;
+	line-height: 35px;
+}
+nav ul{
+	margin: 0px;
+	padding: 0px;
+}
+nav ul li{
+	display: inline-block;
+	color: #000000;
+}
+nav ul li a{
+	color: #000000;
+	font-size: 12px;
+}
+nav ul li a.installed{
+	font-weight:bold;
+}
+.history{
+	float: right;
+	margin-top: 30px;
+	margin-right: 10px;
+	
+}
+.history a{
+	color: #00abea;
+}
+.history a:before{
+	content: "";
+	background-image: url(../images/back_01.png);
+	background-position: 0px -200px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	vertical-align:text-top;
+}
+.operation{
+	height: 30px;
+	float: right;
+	clear: right;
+	margin:10px;
+	margin-bottom: 20px;
+}
+.operation ul.select{
+	display: inline-block;
+	width: 130px;
+	height: 27px;
+	line-height: 27px;
+	border: 1px solid #ccc;
+	vertical-align: top;
+	border-radius: 2px;
+}
+
+.operation ul.select li input{
+	display: inline-block;
+	padding-left: 10px;
+	width: 105px;
+	height: 27px;
+	border:none;
+    padding: 0px;
+    margin: 0px;
+    padding-left:5px;
+}
+.arrow_2{
+	display: inline-block;
+	width: 8px;
+	height: 5px;
+	background-image: url(../images/arrow_2.png);
+	vertical-align: middle;
+	margin: 0px 5px;
+}
+.operation a{
+	display: inline-block;
+}
+a.search{
+	width: 27px;
+	height: 27px;
+	border-radius: 2px;
+	background-color: #2db7f5;
+	background-image: url(../images/search.png);
+	margin-right: 10px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+a.item, a.box{
+	width: 16px;
+	height: 16px;
+	border-radius: 2px;
+	margin-top: 5px;
+	vertical-align: top;
+}
+a.box{
+ 	background-image: url(../images/back_01.png);
+	background-position: -800px 0px;
+	
+ }
+a.item{
+	background-image: url(../images/iconfont-bars.png);
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
+	vertical-align: top;
+	background-position: 0px 2px;
+}
+.modules{
+	clear: right;
+}
+.modules ul li{
+	display: inline-block;
+	width: 31.6%;
+	height: 89px;
+	border: 1px solid #ccc;
+	border-left: 2px solid #2db7f5;
+	border-radius: 3px;
+	margin-left: 1%;
+	margin-bottom: 10px;
+}
+.modules ul li.hover{
+	border-color: #2db7f5;
+	background-color: #f4fcff;
+}
+.modules ul li.hover h2 a{
+	color: #ff6600;
+}
+.modules ul li.hover .moduleLogo{
+	 transform: rotate(360deg);
+	 transition: transform 0.5s ease 0s;
+}
+.controller{
+	width: 88px;
+	height: 88px;
+	line-height: 88px;
+	border-left: 1px solid #ccc;
+	float: right;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.controller a{
+	color: #2db7f5;
+}
+.divider{
+	margin: 0px 5px;
+}
+.modules h2{
+	margin-top: 10px;
+	display: inline-block;
+	height: 20px;
+	font-size: 12px;
+}
+
+.modules h2 a:before{
+	content: "\2022";
+	display: inline-block;
+	font-size: 20px;
+	vertical-align: middle;
+	margin-right: 5px;
+	color: #87d068;
+}
+
+.moduleLogo{
+	background-image: url(../images/back_01.png);
+	background-position: -200px -200px;
+	display: block;
+	width: 47px;
+	height: 45px;
+	overflow: hidden;
+	float: left;
+	margin: 20px 10px 0px 10px;
+}
+.moduleContent{
+	width: 130px;
+	float: left;
+}
+
+
+.moduleContent p{
+	margin:5px 12px;
+}
+.back_02{
+	background-position: -400px -200px;
+}
+.back_03{
+	background-position: -600px -200px;
+}
+.back_04{
+	background-position: 0px -400px;
+}
+.modules ul li:nth-child(4) h2 a:before,
+.modules ul li:nth-child(5) h2 a:before,
+.modules ul li:nth-child(6) h2 a:before,
+.modules ul li:nth-child(10) h2 a:before{
+	color: #3fc7fa;
+}
+.back_05{
+	background-position: -200px -400px;
+}
+.back_06{
+	background-position: -400px -400px;
+}
+.back_07{
+	background-position: -600px -400px;
+}
+.back_08{
+	background-position: 0px -600px;
+}
+
+/* 分页容器的样式，默认居中显示，高度80px，overflow设置为隐藏溢出 */
+.botomContent{
+	width: 98%;
+	height: 80px;
+	background-color: #fff;
+	overflow:hidden;
+	margin: 0 auto;
+}
+
+/* 分页模块的右边距为30px，右浮动*/
+.pages{
+	display: inline-block;
+	float: right;
+	margin-right: 30px;
+}
+.pages a,span.selectPage{
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin: 0px 3px;
+	border-radius: 5px;
+}
+.pages a:hover{
+	background-color: #ebfaff;
+}
+a.now,a.now:hover{
+	background-color: #2db7f5;
+	border: 1px solid #2db7f5;
+	color: #FFFFFF;
+}
+a.selectPage{
+	width: 70px;
+	margin-right: 10px;
+}
+span.arrow_3{
+	display: inline-block;
+	width: 8px;
+	height: 4px;
+	background-image: url(../images/arrow_3.png);
+	vertical-align: middle;
+	margin-left: 10px;
+}
+/* 跳转页样式 */
+input.goto{
+	width: 40px;
+	height: 26px;
+	line-height: 28px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin: 0px 3px;
+	border-radius: 5px;
+}
+/* 起始页和最后页按钮背景图片设置*/
+a.firstPage,a.lastPage{
+	background-image: url(../images/iconfont-anglestep-firstpage.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/* 覆盖最后页按钮背景图片设置*/
+a.lastPage{
+	background-image: url(../images/iconfont-anglestep-lastpage.png);
+}
+
+ul.introduce{
+	position: absolute;
+	border:1px solid #CCC;
+	width: 120px;
+	text-align: center;
+	background-color: #FFFFFF;
+	border-radius: 6px;
+	margin-top: -13px;
+	display: none;
+}
+ul.introduce li{
+	display: block;
+	height: 35px;
+	line-height: 35px;
+
+}
+ul.introduce li a{
+	display: block;
+}
+ul.introduce li a:hover{
+	color:#FFFFFF;
+	background-color: #2db7f5;
+	font-weight: bold;
+}
+aside.closeAside{
+	width:15px;
+	overflow: hidden;
+}
+div.full{
+	margin-left: 10px;
+}
+.modules li.large{
+	width: 95%;
+}
+.tips{
+	width: 200px;
+	height:200px;
+	border:1px solid #CCC;
+	position: absolute;
+	border-radius: 6px;
+}
