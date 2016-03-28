@@ -12,7 +12,7 @@ $(function(){
 			title:document.title,
 			url:url
 		}
-		window.history.pushState({}, document.title, url);
+		window.history.pushState(state, document.title, url);
 	});
 });
 window.addEventListener("popstate", function() {
