@@ -1,6 +1,6 @@
 $(function(){
 	if(location.pathname.length==1){
-		history.replaceState({url:"/IFT/index.html"},"",location.href+"IFT/index.html");
+		history.replaceState({url:"/IFT/index.html"},"","IFT/index.html");
 	}
 	$(".header_container ul li a").click(function(e){
 		e.preventDefault();
@@ -11,7 +11,7 @@ $(function(){
 		var state = {
 			url:url
 		}
-		window.history.pushState(state,"", "");
+		window.history.pushState(state,"", url);
 		
 	});
 	$(window).on("popstate",function(){
