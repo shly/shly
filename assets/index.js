@@ -5,6 +5,6 @@ $(function(){
 		var href = $(this).attr("href")+" #container";
 		$(".container").load(href);
 		var url = window.location.host+$(this).attr("href");
-		window.history.pushState(state, document.title, url);
+		window.history.pushState({}, document.title, url);
 	});
 });
