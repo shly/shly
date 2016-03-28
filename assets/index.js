@@ -1,6 +1,5 @@
 $(function(){
-	console.log(location.pathname);
-	if(location.pathname==null||location.pathname==""){
+	if(location.pathname.length==1){
 		history.replaceState(null,document.title,location.href+"blog/index.html");
 	}
 	$(".header_container ul li a").click(function(e){
@@ -18,6 +17,5 @@ $(function(){
 });
 window.addEventListener("popstate", function() {
     var currentState = history.state.url;
-    console.log(currentState);
-    $(".container").load(location.host+currentState);											
+    $(".container").load(currentState);											
 });
