@@ -9,8 +9,8 @@ $(function(){
 		var href = url+" #container";
 		$(".container").load(href);
 		var state = {
-			"title":document.title,
-			"url":url
+			title:document.title,
+			url:url
 		}
 		window.history.pushState({}, document.title, url);
 	});
