@@ -1,0 +1,147 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	background-color: rgb(222,222,222);
+	font-size: 12px;
+	color: #333;
+	font-family: arial;
+}
+a{
+	text-decoration: none;
+}
+input[type = "radio"]{
+	margin: 3px;
+}
+header{
+	background-color: rgb(51,51,51);
+	height: 50px;
+	line-height: 50px;
+}
+header .header_container{
+	width: 1280px;
+	margin:0 auto;
+}
+header h1{
+	margin: 0;
+	width: 100px;
+	float: left;
+	color: red;
+	line-height: 50px;
+}
+nav{
+	overflow: hidden;
+	text-align: right;
+}
+nav ul{
+	margin:0px;
+	padding:0px;
+}
+nav ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+nav ul li a{
+	color: #dedcdd;
+	font-size: 12px;
+}
+
+.content_container{
+	margin: 0px 20px;
+	margin-right: 440px;
+
+}
+aside,section,article{
+	border:1px solid #CCC;
+	background-color: #FFFFFF;
+	padding: 20px;
+	margin:10px;
+	box-shadow: -webkit-box-shadow: 3px 3px 2px #9f9f9f;  
+  -moz-box-shadow: 3px 3px 2px #9f9f9f;  
+  box-shadow: 3px 3px 2px #9f9f9f;   
+}
+article p{
+	line-height: 20px;
+	text-indent: 25px;
+}
+article img{
+	width: 300px;
+	height: 200px;
+
+}
+section.images figure{
+	width: 150px;
+	height: 150px;
+	border:1px solid #CCC;
+	text-align: center;
+}
+section.images img{
+	width: 110px;
+	height: 110px;
+}
+section.images figcaption{
+	margin:10px 0px;
+}
+footer{
+	height: 80px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #000000;
+	line-height: 80px;
+}
+table{
+	width: 100%;
+    border-collapse:collapse;
+}
+table td,table th{
+	border:1px solid #ccc;
+	height: 30px;
+	padding: 5px;
+}
+table th{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+table tr:last-child{
+	background-color: rgb(222,222,222);
+}
+aside{
+	width: 350px;
+	position: absolute;
+	top: 50px;
+	right: 20px;
+}
+aside h1{
+	border-left:3px solid #ccc;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+}
+aside form label{
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+
+}
+aside form input[type="submit"]{
+	display: block;
+	width: 100%;
+	background-color: #3355d0;
+	height: 30px;
+	border-radius:5px;
+	border:none;
+	color: #FFFFFF;
+}
+aside form input{
+	vertical-align: middle;
+}
+
+textarea{
+	vertical-align: top;
+}
+.form_item{
+	margin:10px 0px;
+
+}
+.form_item p{
+	margin-left: 100px;
+}
