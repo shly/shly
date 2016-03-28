@@ -1,5 +1,5 @@
 $(function(){
-	history.replaceState(null,document.title,location.href+"/blog/index.html");
+	history.replaceState(null,document.title,location.href+"blog/index.html");
 	$(".header_container ul li a").click(function(e){
 		e.preventDefault();
 		$(this).addClass("current").parent("li").siblings().children("a").removeClass("current");
@@ -10,7 +10,7 @@ $(function(){
 	});
 });
 window.addEventListener("popstate", function() {
-    var currentState = history.state;
+    var currentState = history.state.url;
     console.log(currentState);
     $(".container").load(href);											
 });
