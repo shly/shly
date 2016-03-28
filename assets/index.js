@@ -1,5 +1,7 @@
 $(function(){
-	history.replaceState(null,document.title,location.href+"blog/index.html");
+	if(location.pathname==null||location.pathname==""){
+		history.replaceState(null,document.title,location.href+"blog/index.html");
+	}
 	$(".header_container ul li a").click(function(e){
 		e.preventDefault();
 		$(this).addClass("current").parent("li").siblings().children("a").removeClass("current");
