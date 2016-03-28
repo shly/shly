@@ -1,4 +1,5 @@
 $(function(){
+	console.log(location.pathname);
 	if(location.pathname==null||location.pathname==""){
 		history.replaceState(null,document.title,location.href+"blog/index.html");
 	}
@@ -18,5 +19,5 @@ $(function(){
 window.addEventListener("popstate", function() {
     var currentState = history.state.url;
     console.log(currentState);
-    $(".container").load(href);											
+    $(".container").load(location.host+currentState);											
 });
