@@ -1,6 +1,6 @@
 $(function(){
 	if(location.pathname.length==1){
-		history.replaceState({title:document.title,url:"/IFT/index.html"},document.title,location.href+"IFT/index.html");
+		history.replaceState({url:"/IFT/index.html"},"",location.href+"IFT/index.html");
 	}
 	$(".header_container ul li a").click(function(e){
 		e.preventDefault();
@@ -9,10 +9,9 @@ $(function(){
 		var href = url+" #container";
 		$(".container").load(href);
 		var state = {
-			title:document.title,
 			url:url
 		}
-		window.history.pushState(state, document.title, url);
+		window.history.pushState(state,"", "");
 		
 	});
 	$(window).on("popstate",function(){
