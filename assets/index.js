@@ -14,8 +14,8 @@ $(function(){
 		}
 		window.history.pushState(state, document.title, url);
 	});
-});
-window.addEventListener("popstate", function() {
-    var currentState = history.state.url;
-    $(".container").load(currentState);											
+	$("window").on("popstate",function(){
+		var currentState = history.state.url;
+        $(".container").load(currentState+" #container");	
+	})
 });
