@@ -13,20 +13,36 @@ var aqiData = {};
  * 然后渲染aqi-list列表，增加新增的数据
  */
 function addAqiData() {
-	var aqiCity = document.getElementById('aqi-city-input').value;
-	var aqiValue = document.getElementById('aqi-value-input').value;
-	aqiData[aqiCity] = aqiValue;
+	var aqiCity = document.getElementById('aqi-city-input').value.trim();
+	var aqiValue = document.getElementById('aqi-value-input').value.trim();
+	var testCity = /^[\u4E00-\u9FA5\uF900-\uFA2Da-zA-Z]+$/;
+	var testValue = /^\d+$/;
+	if(!testCity.test(aqiCity)){
+		alert("对不起，城市名必须为中英文字符");
+	}else if(!testValue.test(aqiValue)){
+		alert("对不起，空气质量指数必须为整数");
+	}else if(aqiData[aqiCity]){
+		alert("对不起，该城市已存在");
+	}else{
+		aqiData[aqiCity] = aqiValue;
+	}
+	
 }
 
 /**
  * 渲染aqi-table表格
  */
 function renderAqiList() {
-	var tableContent = " <tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
-	for (var i in aqiData) {
-		tableContent += "<tr><td>"+i+"</td><td>"+aqiData[i]+"</td><td><button>删除</button></td></tr>"
+	if(Object.getOwnPropertyNames(aqiData).length==0){
+		document.getElementById("aqi-table").innerHTML = "<tr><td>当前无城市</td></tr>";
+	}else{
+		var tableContent = " <tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
+		for (var i in aqiData) {
+			tableContent += "<tr><td>"+i+"</td><td>"+aqiData[i]+"</td><td><button>删除</button></td></tr>"
+		}
+	     document.getElementById("aqi-table").innerHTML = tableContent;
 	}
-	 document.getElementById("aqi-table").innerHTML = tableContent;
+	
 
 }
 
