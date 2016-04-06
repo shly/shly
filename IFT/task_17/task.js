@@ -80,16 +80,20 @@ function renderChart() {
   var rect = "";
   var count = 0;
   for(var i in chartData){
-    rect += "<div class = 'box' title='"+i+":"+chartData[i]+"'></div>"
+    rect += "<div class = 'box'><div class = 'item' title='"+i+":"+chartData[i]+"'></div></div>"
     count++;
   }
   document.querySelector(".aqi-chart-wrap").innerHTML = rect;
   var wholewidth = window.getComputedStyle(document.querySelector(".aqi-chart-wrap"),null).width;
+   var wholeheight = window.getComputedStyle(document.querySelector(".aqi-chart-wrap"),null).height;
   var boxWidth = (parseInt(wholewidth)/count)+"px";
   for(var j=0;j<count;j++){
      document.querySelectorAll(".box")[j].style.width = boxWidth;
-     var height = parseInt(document.querySelectorAll(".box")[j].title.split(":")[1])/3;
-     document.querySelectorAll(".box")[j].style.backgroundSize = "80%,80%";
+     document.querySelectorAll(".box")[j].style.height = wholeheight;
+     var height = document.querySelectorAll(".box")[j].children[0].title.split(":")[1];
+     document.querySelectorAll(".box")[j].children[0].style.height = height+"px";
+     var color = getRandomColor();
+     document.querySelectorAll(".box")[j].children[0].style.backgroundColor = color;
   }
 
 }
@@ -156,6 +160,18 @@ function initAqiChartData() {
   // 处理好的数据存到 chartData 中
   chartData = aqiSourceData["北京"];
 }
+/*以下代码生成随机颜色*/
+function getRandomColor() 
+{ 
+  var c = '#'; 
+  var cArray = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']; 
+  for(var i = 0; i < 6;i++) 
+  { 
+  var cIndex = Math.round(Math.random()*15); 
+  c += cArray[cIndex]; 
+  } 
+  return c; 
+} 
 
 /**
  * 初始化函数
