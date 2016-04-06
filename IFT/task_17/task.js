@@ -101,14 +101,17 @@ function renderChart() {
 /**
  * 日、周、月的radio事件点击时的处理函数
  */
-function graTimeChange() {
+function graTimeChange(event) {
   // 确定是否选项发生了变化 
 
   // 设置对应数据
 
   // 调用图表渲染函数
-  alert(document.querySelector("input[name = 'gra-time']:checked").value);
-  renderChart();
+  var timecur = event.target.value;
+  if(timecur!=pageState.nowGraTime){
+    renderChart();
+  }
+  
 }
 
 /**
