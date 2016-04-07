@@ -9,11 +9,7 @@ var EventUtil = {
     }
   }
 };
-EventUtil.addEvent(document.querySelector(".leftIn"),"click",leftIn);
-EventUtil.addEvent(document.querySelector(".rightIn"),"click",rightIn);
-EventUtil.addEvent(document.querySelector(".leftOut"),"click",leftOut);
-EventUtil.addEvent(document.querySelector(".rightOut"),"click",rightOut);
-EventUtil.addEvent(document.querySelector(".showBox"),"click",removeEle);
+
 function leftIn(){
 	var value = document.querySelector(".datavalue").value;
 	if(value!=""){
@@ -58,3 +54,8 @@ function removeEle(event){
 	}
 
 }
+EventUtil.addEvent(document.querySelector(".leftIn"),"click",leftIn);
+EventUtil.addEvent(document.querySelector(".rightIn"),"click",rightIn);
+EventUtil.addEvent(document.querySelector(".leftOut"),"click",leftOut);
+EventUtil.addEvent(document.querySelector(".rightOut"),"click",rightOut);
+EventUtil.addEvent(document.querySelector(".showBox"),"click",removeEle);

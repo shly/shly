@@ -4,17 +4,25 @@
 	<meta charset="utf-8"/>
 	<title>DOM</title>
 	<style type="text/css">
-	.item{
+	.box{
 		display: inline-block;
-		width: 50px;
-		height: 30px;
+		width: 20px;
+		height: 150px;
 		line-height: 30px;
 		text-align: center;
-		background-color: red;
+		
 		color: #FFFFFF;
-		margin:10px;
-		cursor: pointer;
+		margin:5px;
+		position: relative;
 	}
+	.item{
+		background-color: red;
+		cursor: pointer;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+	
 	</style>
 </head>
 <body>
@@ -23,6 +31,7 @@
 <input type="button" value="右侧入" class="rightIn"/>
 <input type="button" value="左侧出" class="leftOut"/>
 <input type="button" value="右侧出" class="rightOut"/>
+<input type="button" value="排序" class="sort"/>
 
 <div class="showBox"></div>
 

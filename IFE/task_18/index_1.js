@@ -32,61 +32,26 @@ var DataUilt = {
 				dataList.splice(i,1);
 			}
 		}
-	},
-	dataSort:function(){
-		for(var i=1;i<dataList.length;i++){
-			var temp = dataList[i];
-			var j=i;
-			while(j>0&&dataList[j-1]>temp){
-                 dataList[j] = dataList[--j];
-			}
-			dataList[j]=temp;
-		}
-
 	}
 }
 /*向showBox中绘制图形*/
 function render(){
 	var ele = "";
-	var showBox = document.querySelector(".showBox");
 	for(var i = 0;i<dataList.length;i++){
-		ele += "<div class = 'box'><div class='item' title = '"+dataList[i]+"'></div></div>";
+		ele += "<div class='item'>"+dataList[i]+"</div>";
 	}
-	showBox.innerHTML = ele;
-	var items = document.querySelectorAll(".item");
-	for(var j = 0;j<dataList.length;j++){
-		items[j].style.height = items[j].title+"px";
-	}
+	document.querySelector(".showBox").innerHTML = ele;
 }
 /*添加点击事件的方法*/
 function leftIn(){
 	var value = document.querySelector(".datavalue").value;
-	var reg = /^\d+$/;
-	if(dataList.length<60){
-		if(reg.test(value)&&10<=value&&value<=100){
-			DataUilt.leftIn(value);
-			render();
-		}else{
-			alert("请输入10到100这之间的数字");
-		}
-	}else{
-		alert("对不起，队列长度不能超过60");
-	}
-	
+	DataUilt.leftIn(value);
+	render();
 }
 function rightIn(){
 	var value = document.querySelector(".datavalue").value;
-	var reg = /^\d+$/;
-	if(dataList.length<60){
-		if(reg.test(value)&&10<=value&&value<=100){
-			DataUilt.rightIn(value);
-			render();
-		}else{
-			alert("请输入10到100这之间的数字");
-		}
-	}else{
-		alert("对不起，队列长度不能超过60");
-	}
+	DataUilt.rightIn(value);
+	render();
 }
 function leftOut(){
 	if(dataList.length>0){
@@ -114,17 +79,12 @@ function removeself(event){
 		render();
 		alert(vaule);
 	}
+
 }
-function dataSort(){
-	if(dataList.length>1){
-	  DataUilt.dataSort();
-	  render();
-	}
-}
+
 /*为所有按钮添加事件处理程序*/
 EventUtil.addEvent(document.querySelector(".leftIn"),"click",leftIn);
 EventUtil.addEvent(document.querySelector(".rightIn"),"click",rightIn);
 EventUtil.addEvent(document.querySelector(".leftOut"),"click",leftOut);
 EventUtil.addEvent(document.querySelector(".rightOut"),"click",rightOut);
 EventUtil.addEvent(document.querySelector(".showBox"),"click",removeself);
-EventUtil.addEvent(document.querySelector(".sort"),"click",dataSort);
