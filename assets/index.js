@@ -1,6 +1,6 @@
 $(function(){
 	if(location.pathname.length==1){
-		history.replaceState({url:"/IFT/index.html"},"","IFT/index.html");
+		history.replaceState({url:"/IFE/index.html"},"","IFE/index.html");
 	}
 	$(".header_container ul li a").click(function(e){
 		e.preventDefault();

@@ -122,6 +122,7 @@ function citySelectChange() {
 
   // 设置对应数据
   var city = document.getElementById("city-select").value;
+  pageState.nowSelectCity = city;
   chartData = aqiSourceData[city];
 
   // 调用图表渲染函数
@@ -145,7 +146,7 @@ function initGraTimeForm() {
  */
 function initCitySelector() {
   // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
-  var aqiCities = "";
+  var aqiCities = "";   
   for(var i in aqiSourceData){
     aqiCities += "<option value = '"+i+"'>"+ i +"</option>";
   }
@@ -161,7 +162,9 @@ function initCitySelector() {
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
   // 处理好的数据存到 chartData 中
-  chartData = aqiSourceData["北京"];
+  var city = document.getElementById("city-select").value;
+  pageState.nowSelectCity = city;
+  chartData = aqiSourceData[city];
 }
 /*以下代码生成随机颜色*/
 function getRandomColor() 
