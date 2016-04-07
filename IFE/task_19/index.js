@@ -16,22 +16,17 @@ EventUtil.addEvent(document.querySelector(".rightOut"),"click",rightOut);
 EventUtil.addEvent(document.querySelector(".showBox"),"click",removeEle);
 function leftIn(){
 	var value = document.querySelector(".datavalue").value;
-	if(value!=""){
-		var newNode = document.createElement("div");
-	    newNode.className = "item";
-		newNode.innerHTML = value;
-		document.querySelector(".showBox").insertBefore(newNode,document.querySelector(".showBox").firstChild);
-	}
-	
+	var newNode = document.createElement("div");
+	newNode.className = "item";
+	newNode.innerHTML = value;
+	document.querySelector(".showBox").insertBefore(newNode,document.querySelector(".showBox").firstChild);
 }
 function rightIn(){
 	var value = document.querySelector(".datavalue").value;
-	if(value!=""){
-		var newNode = document.createElement("div");
-		newNode.className = "item";	
-		newNode.innerHTML = value;
-		document.querySelector(".showBox").appendChild(newNode);
-	}
+	var newNode = document.createElement("div");
+	newNode.className = "item";	
+	newNode.innerHTML = value;
+	document.querySelector(".showBox").appendChild(newNode);
 }
 function leftOut(){
 	var showBox = document.querySelector(".showBox");
