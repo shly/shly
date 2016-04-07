@@ -83,17 +83,19 @@ function renderChart() {
     rect += "<div class = 'box'><div class = 'item' title='"+i+":"+chartData[i]+"'></div></div>"
     count++;
   }
-  document.querySelector(".aqi-chart-wrap").innerHTML = rect;
-  var wholewidth = window.getComputedStyle(document.querySelector(".aqi-chart-wrap"),null).width;
-   var wholeheight = window.getComputedStyle(document.querySelector(".aqi-chart-wrap"),null).height;
+  var chartWrap = document.querySelector(".aqi-chart-wrap");
+  chartWrap.innerHTML = rect;
+  var wholewidth = window.getComputedStyle(chartWrap,null).width;
+  var wholeheight = window.getComputedStyle(chartWrap,null).height;
   var boxWidth = (parseInt(wholewidth)/count)+"px";
   for(var j=0;j<count;j++){
-     document.querySelectorAll(".box")[j].style.width = boxWidth;
-     document.querySelectorAll(".box")[j].style.height = wholeheight;
-     var height = document.querySelectorAll(".box")[j].children[0].title.split(":")[1];
-     document.querySelectorAll(".box")[j].children[0].style.height = height+"px";
+     var ele = document.querySelectorAll(".box")[j];
+     var height = ele.children[0].title.split(":")[1];
      var color = getRandomColor();
-     document.querySelectorAll(".box")[j].children[0].style.backgroundColor = color;
+     ele.style.width = boxWidth;
+     ele.style.height = wholeheight;
+     ele.children[0].style.height = height+"px";
+     ele.children[0].style.backgroundColor = color;
   }
 
 }
@@ -109,6 +111,7 @@ function graTimeChange(event) {
   // 调用图表渲染函数
   var timecur = event.target.value;
   if(timecur!=pageState.nowGraTime){
+    pageState.nowGraTime = timecur;
     renderChart();
   }
   
@@ -136,7 +139,7 @@ function citySelectChange() {
 function initGraTimeForm() {
   var radios = document.querySelectorAll("input[name = 'gra-time']");
   for (var i = radios.length - 1; i >= 0; i--) {
-    EventUtil.addEvent(radios[i],"change",graTimeChange);
+    EventUtil.addEvent(radios[i],"click",graTimeChange);
   }
 
 }
@@ -154,6 +157,7 @@ function initCitySelector() {
 
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
   EventUtil.addEvent(document.getElementById("city-select"),"change",citySelectChange);
+  pageState.nowSelectCity = document.getElementById("city-select").value;
 }
 
 /**
@@ -162,9 +166,7 @@ function initCitySelector() {
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
   // 处理好的数据存到 chartData 中
-  var city = document.getElementById("city-select").value;
-  pageState.nowSelectCity = city;
-  chartData = aqiSourceData[city];
+  chartData = aqiSourceData[pageState.nowSelectCity];
 }
 /*以下代码生成随机颜色*/
 function getRandomColor() 
