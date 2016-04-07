@@ -11,7 +11,7 @@ var EventUtil = {
   }
 };
 /*添加数组用于存储队列中的数据*/
-var dataList = [];
+var dataList = [90.80,70,60];
 /*dataList的操作方法*/
 var DataUilt = {
 	leftIn:function(value){
