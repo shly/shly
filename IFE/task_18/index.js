@@ -24,7 +24,7 @@ function leftIn(){
 function rightIn(){
 	var value = document.querySelector(".datavalue").value;
 	var newNode = document.createElement("div");
-	newNode.classNa类型me = "item";	
+	newNode.className = "item";	
 	newNode.innerHTML = value;
 	document.querySelector(".showBox").appendChild(newNode);
 }
