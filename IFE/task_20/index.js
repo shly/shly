@@ -67,7 +67,7 @@ function render(){
 	}
 }
 /*检测输入数据*/
-function testData(value){
+function dealData(value){
 	var reg = /^\d+$/;
 	return reg.test(value)&&10<=value&&value<=100;
 
@@ -75,31 +75,22 @@ function testData(value){
 /*添加点击事件的方法*/
 function leftIn(){
 	var value = document.querySelector(".datavalue").value;
+	if(dataList.length<60){	
+	 DataUilt.leftIn(value);
 	
-	if(dataList.length<60){
-		if(testData(value)){
-			DataUilt.leftIn(value);
-			render();
-		}else{
-			alert("请输入10到100这之间的数字");
-		}
 	}else{
 		alert("对不起，队列长度不能超过60");
 	}
-	
+	render();
 }
 function rightIn(){
 	var value = document.querySelector(".datavalue").value;
 	if(dataList.length<60){
-		if(testData(value)){
-			DataUilt.rightIn(value);
-			render();
-		}else{
-			alert("请输入10到100这之间的数字");
-		}
+		DataUilt.rightIn(value);
 	}else{
 		alert("对不起，队列长度不能超过60");
 	}
+	render();
 }
 function leftOut(){
 	if(dataList.length>0){
