@@ -33,16 +33,24 @@ var DataUilt = {
 			}
 		}
 	},
-	dataSort:function(){
-		for(var i=1;i<dataList.length;i++){
-			var temp = dataList[i];
-			var j=i;
-			while(j>0&&dataList[j-1]>temp){
-                 dataList[j] = dataList[--j];
-			}
-			dataList[j]=temp;
-		}
-
+	insertSort:function(){
+		 var i=1,j=i;
+		 var temp = dataList[i];
+		 var timer = setInterval(function() {
+            if (i >= dataList.length) {
+                clearInterval(timer);
+            }
+            if (j>0&&dataList[j-1]>temp) {
+                dataList[j] = dataList[--j];
+                render();
+            }else{
+            	dataList[j] = temp;
+            	j = ++i;
+            	temp = dataList[i];
+            	render();
+            }
+        }, 500);
+		
 	}
 }
 /*向showBox中绘制图形*/
@@ -115,16 +123,22 @@ function removeself(event){
 		alert(vaule);
 	}
 }
-function dataSort(){
+function insertSort(){
 	if(dataList.length>1){
-	  DataUilt.dataSort();
+	  DataUilt.insertSort();
 	  render();
 	}
 }
+function init(){
+  dataList = [90,80,70,60,50,40,30];
+  render();
+}
+
 /*为所有按钮添加事件处理程序*/
+EventUtil.addEvent(document.querySelector(".init"),"click",init);
 EventUtil.addEvent(document.querySelector(".leftIn"),"click",leftIn);
 EventUtil.addEvent(document.querySelector(".rightIn"),"click",rightIn);
 EventUtil.addEvent(document.querySelector(".leftOut"),"click",leftOut);
 EventUtil.addEvent(document.querySelector(".rightOut"),"click",rightOut);
 EventUtil.addEvent(document.querySelector(".showBox"),"click",removeself);
-EventUtil.addEvent(document.querySelector(".sort"),"click",dataSort);
+EventUtil.addEvent(document.querySelector(".sort"),"click",insertSort);
