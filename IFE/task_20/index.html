@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>DOM</title>
+	<style type="text/css">
+	.box{
+		display: inline-block;
+		width: 20px;
+		height: 150px;
+		line-height: 30px;
+		text-align: center;
+		
+		color: #FFFFFF;
+		margin:5px;
+		position: relative;
+	}
+	.item{
+		background-color: red;
+		cursor: pointer;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+	textarea{
+		vertical-align: middle;
+		width: 200px;
+		height: 50px;
+		padding: 5px;
+	}
+	
+	</style>
+</head>
+<body>
+<textarea class="datavalue">
+	
+</textarea>
+<input type="button" value="init" class="init" />
+<input type="button" value="左侧入" class="leftIn" />
+<input type="button" value="右侧入" class="rightIn"/>
+<input type="button" value="左侧出" class="leftOut"/>
+<input type="button" value="右侧出" class="rightOut"/>
+<input type="button" value="插入排序" class="sort"/>
+
+<div class="showBox"></div>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
