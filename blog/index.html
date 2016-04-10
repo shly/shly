@@ -2,10 +2,33 @@
 layout: default
 title: 我的Blog
 ---
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-　{% for post in site.posts %}
-　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-　{% endfor %}
-</ul>
+<header>
+		<div class="header_container">
+			<h1>SLYのspace</h1>
+			<ul>
+				<li>
+					<a href="/blog/index.html">blog</a>
+				</li>
+				<li>
+					<a href="/skill/index.html">skill</a>
+				</li>
+				<li>
+					<a href="/IFE/index.html" class="current">IFT</a>
+				</li>
+				<li>
+					<a href="/me/index.html" >about</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<div class="container">
+		<div id="container">
+			<h2>{{ page.title }}</h2>
+			<p>最新文章</p>
+			<ul>
+			　{% for post in site.posts %}
+			　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+			　{% endfor %}
+			</ul>
+		</div>
+	</div>
