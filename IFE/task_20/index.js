@@ -74,10 +74,10 @@ function dealData(value){
 }
 /*添加点击事件的方法*/
 function leftIn(){
-	var value = document.querySelector(".datavalue").value;
+	var value = document.querySelector(".datavalue").innerHTML;
+	alert(value);
 	if(dataList.length<60){	
-	 DataUilt.leftIn(value);
-	
+	 DataUilt.leftIn(value);	
 	}else{
 		alert("对不起，队列长度不能超过60");
 	}

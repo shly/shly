@@ -59,6 +59,7 @@ header{
 	margin:10px auto;
 	box-sizing: border-box;
 	min-height: 100%;
+	position: relative;
 }
 .task{
 	box-sizing: border-box;
