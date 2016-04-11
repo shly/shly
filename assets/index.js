@@ -19,6 +19,8 @@ $(function(){
 	$(window).on("popstate",function(){
 		var currentState = history.state.url;
         $(".container").load(currentState+" #container");
-        $(".current").addClass(history.state.subfolder);
+        var currentClass = "'."+history.state.subfolder+"'";
+        $(currentClass).addClass("current").parent("li").siblings().children("a").removeClass("current");
+
 	});
 });
