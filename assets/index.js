@@ -2,7 +2,7 @@ $(function(){
 	if(location.pathname.length==1){
 		var state = {
 				url:"/IFE/index.html",
-				subfolder:"blog"
+				subfolder:"IFE"
 			} 
 		history.replaceState(state,"","IFE/index.html");
 	}
