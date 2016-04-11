@@ -1,6 +1,10 @@
 $(function(){
 	if(location.pathname.length==1){
-		history.replaceState({url:"/IFE/index.html",subfolder:"blog"},"","IFE/index.html");
+		var state = {
+				url:"/IFE/index.html",
+				subfolder:"blog"
+			} 
+		history.replaceState(state,"","IFE/index.html");
 	}
 	$(".header_container ul li a").click(function(e){
 		e.preventDefault();
