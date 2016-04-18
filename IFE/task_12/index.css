@@ -1,0 +1,90 @@
+section{
+	margin-top:20px;
+}
+.part1 table th{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.part1 table tbody tr:nth-child(2n){
+	background-color: #ccc;
+}
+.part1 table tbody tr:nth-child(-n+3){
+	color: red;
+}
+.part2 input{
+	width: 200px;
+	height: 20px;
+	border: 1px solid #CCC;
+	transition: width 2s;
+}
+/*使用动画的方式完成
+@keyframes widthchange{
+	from {
+		width: 200px;
+	}
+	to{
+		width:300px;
+	}
+}
+@-moz-keyframes widthchange{
+	from {
+		width: 200px;
+	}
+	to{
+		width:300px;
+	}
+}
+@-webkit-keyframes widthchange{
+	from {
+		width: 200px;
+	}
+	to{
+		width:300px;
+	}
+}
+@-o-keyframes widthchange{
+	from {
+		width: 200px;
+	}
+	to{
+		width:300px;
+	}
+}
+.part2 input:focus{
+	width: 300px;
+	animation:widthchange 2s;
+	-moz-animation:widthchange 2s;
+	-webkit-animation:widthchange 2s;
+	-o-animation:widthchange 2s;
+}*/
+/*使用过渡的方式完成宽度的变化*/
+.part2 input:focus{
+	width: 300px;
+}
+.banner{
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+.part3 img{
+	width: 200px;
+	height: 200px;
+}
+.bannerbar{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	font-size: 0px;
+
+}
+.bannerbar a{
+	font-size: 16px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.5);
+	color: #ffffff;
+	margin-left: 3px;
+	cursor: pointer;
+}
