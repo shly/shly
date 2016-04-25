@@ -30,6 +30,7 @@ header{
 	left: 300px;
 	font-size: 40px;
 	transition : font-size 0.4s;
+	color: #FFFFFF;
 }
 .header_container h1:hover{
 	font-size: 45px;
@@ -38,6 +39,7 @@ header{
 	position: absolute;
 	top: 145px;
 	left: 500px;
+	color: #FFFFFF;
 }
 .header_container ul{
 	float: right;
@@ -96,6 +98,5 @@ header{
 	color:#000000;
 }
 .task h1{
-	border-left:2px solid #ccc;
 	padding: 5px;
 }
