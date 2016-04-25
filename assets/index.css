@@ -9,6 +9,7 @@ html,body{
 h1,h2{
 	margin: 0px;
 	padding:0px;
+	color: #333333;
 }
 header{
 	background-color: rgba(31,114,70,.8);
