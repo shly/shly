@@ -27,4 +27,12 @@ $(function(){
         $(currentClass).addClass("current").parent("li").siblings().children("a").removeClass("current");
 
 	});
+	/*以下为catalog*/
+	var temp = '<em class="node-edge start"></em><dl>';
+	$.each($(".catalog h2"),function(i,n){
+		$(n).attr("id","catalog_"+i);
+		temp+='<dd><em class="node"></em><a href="#catalog_'+i+'">'+$(n).html()+'</a></dd>';
+	});
+	temp+='<em class="node-edge end"></em></dl>';
+	$(".side-catalog").html(temp);
 });
