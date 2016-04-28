@@ -66,18 +66,22 @@ section{
 	height: 200px;
 	position: relative;
 }
-.part3 img{
+.part3 img,.show_image{
 	width: 200px;
 	height: 200px;
+}
+.show_image{
+	position: relative;
+	overflow: hidden;
 }
 .bannerbar{
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
 	font-size: 0px;
-
 }
 .bannerbar a{
+	text-decoration:none;
 	font-size: 16px;
 	display: inline-block;
 	width: 20px;
@@ -88,3 +92,20 @@ section{
 	margin-left: 3px;
 	cursor: pointer;
 }
+
+.show_image span:first-child{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.show_image span:nth-child(2){
+	position: absolute;
+	top: 0px;
+	left: 200px;
+}
+.show_image span:last-child{
+	position: absolute;
+	top: 0px;
+	left: 400px;
+}
+
