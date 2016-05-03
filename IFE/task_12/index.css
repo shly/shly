@@ -65,15 +65,39 @@ section{
 	width: 200px;
 	height: 200px;
 	position: relative;
+	overflow: hidden;
 }
-.part3 img,.show_image{
+.part3 img{
 	width: 200px;
 	height: 200px;
 }
 .show_image{
+	width: 300%;
+	height: 100%;
 	position: relative;
-	overflow: hidden;
+	transition: left .8s ease;
+	left: 0;
+	top: 0;
+	font-size: 0;/*为了让内部的inline-block之间没有空隙*/
 }
+.show_image span{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+}
+
+#img_1:target ~ .show_image {
+    left: 0;
+}
+
+#img_2:target ~ .show_image {
+    left: -100%;
+}
+
+#img_3:target ~ .show_image {
+    left: -200%;
+}
+
 .bannerbar{
 	position: absolute;
 	bottom: 0px;
@@ -93,19 +117,5 @@ section{
 	cursor: pointer;
 }
 
-.show_image span:first-child{
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-.show_image span:nth-child(2){
-	position: absolute;
-	top: 0px;
-	left: 200px;
-}
-.show_image span:last-child{
-	position: absolute;
-	top: 0px;
-	left: 400px;
-}
+
 
