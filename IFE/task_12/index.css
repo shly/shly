@@ -15,7 +15,7 @@ section{
 	width: 200px;
 	height: 20px;
 	border: 1px solid #CCC;
-	transition: width 2s;
+	transition: width .2s;
 }
 /*使用动画的方式完成
 @keyframes widthchange{
@@ -60,6 +60,7 @@ section{
 /*使用过渡的方式完成宽度的变化*/
 .part2 input:focus{
 	width: 300px;
+	transition: width 1s;
 }
 .banner{
 	width: 200px;
