@@ -1,0 +1,22 @@
+div {
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  margin: 20px;
+  box-sizing: border-box;
+  -webkit-box-flex: 0.5;
+  -webkit-flex-grow: 0.5;
+  -ms-flex-positive: 0.5;
+  flex-grow: 0.5;
+  background-color: #FFF;
+  -webkit-transition: background-color 5000ms ease-in 5000ms;
+  transition: background-color 5000ms ease-in 5000ms;
+}
+.container {
+  display: flex;
+  width: 1000px;
+}
+.sub_3 {
+  height: 40px;
+}
