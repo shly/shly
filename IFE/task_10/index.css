@@ -72,7 +72,7 @@ div.box-8{
 	flex-basis: 10px;
 	flex-grow: 1;
 }
-div.container_1{
+div.container_1,div.container_2{
 	width: 1000px;
 	height: 800px;
 	border: 1px solid #00F;
@@ -80,4 +80,24 @@ div.container_1{
 	justify-content: center;
 	align-content: flex-end;
 	align-items: flex-end;
+}
+div.box-9{
+	flex-basis: 300px;
+	height: 100px;
+	flex-shrink: 1;
+}
+div.box-10{
+	flex-basis: 300px;
+	height: 200px;
+	flex-shrink: 2;
+}
+div.box-11{
+	flex-basis: 300px;
+	height: 300px;
+	flex-shrink: 3;
+}
+div.box-12{
+	flex-basis: 300px;
+	height: 400px;
+	flex-shrink: 4;
 }
