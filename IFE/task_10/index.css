@@ -46,3 +46,38 @@ div.container{
 		order: 1;
 	}
 }
+div.box-5{
+	width: 50px;
+	height: 100px;
+	order: 1;	
+	flex-grow: 1;
+}
+div.box-6{
+	width: 100px;
+	height: 200px;
+	order: 5;
+	flex-grow: 1;
+}
+div.box-7{
+	width: 150px;
+	height: 300px;
+	order: 3;
+	flex-grow: 1;
+}
+div.box-8{
+	width: 200px;
+	height: 400px;
+	order: -1;
+	align-self: flex-start;
+	flex-basis: 10px;
+	flex-grow: 1;
+}
+div.container_1{
+	width: 1000px;
+	height: 800px;
+	border: 1px solid #00F;
+	display: flex;
+	justify-content: center;
+	align-content: flex-end;
+	align-items: flex-end;
+}
