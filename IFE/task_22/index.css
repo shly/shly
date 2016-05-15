@@ -1,4 +1,4 @@
-div {
+.container div {
   border: 1px solid #000;
   display: -webkit-box;
   display: -webkit-flex;
@@ -10,8 +10,6 @@ div {
   -ms-flex-positive: 0.5;
   flex-grow: 0.5;
   background-color: #FFF;
-  -webkit-transition: background-color 5000ms ease-in 5000ms;
-  transition: background-color 5000ms ease-in 5000ms;
 }
 .container {
   display: flex;
