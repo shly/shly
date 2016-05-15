@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>javascript 和树</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="container">
+	    地球
+		<div class="sub_1">
+		天空
+			<div class="sub_2">
+			鸟
+				<div class="sub_3">
+					老鹰
+				</div>
+				<div class="sub_3">
+					大雁
+				</div>
+			</div>
+			<div class="sub_2">
+			飞机
+				<div class="sub_3">
+					客机
+				</div>
+				<div class="sub_3">
+					战斗机
+				</div>
+			</div>
+		</div>
+		<div class="sub_1">
+		陆地
+			<div class="sub_2">
+			动物
+				<div class="sub_3">
+					老虎
+				</div>
+				<div class="sub_3">
+					大象
+				</div>
+			</div>
+			<div class="sub_2">
+			植物
+				<div class="sub_3">
+					树
+				</div>
+				<div class="sub_3">
+					草
+				</div>
+			</div>
+		</div>
+		<div class="sub_1">
+		海洋
+			<div class="sub_2">
+			海洋动物
+				<div class="sub_3">鲸鱼</div>
+				<div class="sub_3">鲨鱼</div>
+			</div>
+			<div class="sub_2">
+			海洋植物
+			<div class="sub_3">海带</div>
+				<div class="sub_3">紫菜</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="btn_group"> 
+		<input type="button" value="开始遍历" id="bft" class="btn" />
+	</div>
+	<form>
+		<label for="searchContent">请输入要查找的内容：</label>
+		<input type="text" id="searchContent" class="btn"/>
+		<input type="button" value="开始查找" id="search"  class="btn" />
+	</form>
+	<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

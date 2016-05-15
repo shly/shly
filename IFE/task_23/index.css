@@ -1,9 +1,15 @@
+.btn{
+  width: 150px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius:5px;
+}
 .container div {
   border: 1px solid #000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  margin: 20px;
+  margin: 10px;
   box-sizing: border-box;
   -webkit-box-flex: 0.5;
   -webkit-flex-grow: 0.5;
@@ -14,8 +20,13 @@
 }
 .container {
   display: flex;
-  width: 1000px;
+  margin-bottom: 50px;
+  border: 1px solid #000;
 }
 .sub_3 {
   height: 40px;
+}
+.btn_group{
+  width: 200px;
+  float: left;
 }
