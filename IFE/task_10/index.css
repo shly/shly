@@ -101,3 +101,42 @@ div.box-12{
 	height: 400px;
 	flex-shrink: 4;
 }
+div.container_3{
+	width: 500px;
+	height: 500px;
+	border: 1px solid #00F;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+}
+div.container_3>.space{
+	width: 100%;
+	border: none;
+}
+div.container_3>div.box-14{
+	width: 300px;
+	height: 300px;
+	margin:0px;	
+	border: 1px solid #F00;
+}
+
+.vertical-box {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  flex-flow: column;
+}
+.horizontal-box {
+  display: flex;
+  flex-flow: row;
+}
+.spacer {
+  flex: auto;
+  background-color: black;
+}
+.centered-element {
+  flex: none;
+  background-color: white;
+}
