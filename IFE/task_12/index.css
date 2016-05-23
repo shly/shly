@@ -117,6 +117,14 @@ section{
 	margin-left: 3px;
 	cursor: pointer;
 }
-
+section.part4{
+	border:2px solid #888;
+	width: 900px;
+	height: 500px;
+	columns: 300px 3;
+	/*column-fill: auto;*/
+	/*column-gap: 30px;*/
+	column-rule: 1px dotted #ccc;
+}
 
 

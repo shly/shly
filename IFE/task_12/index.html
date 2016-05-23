@@ -94,6 +94,35 @@
 		</div>
 		
 	</section>
+	<section class="part4">
+		Summary
+		The columns CSS property is a shorthand property allowing to set both the column-width and the column-count properties at the same time.
+
+		Initial value	as each of the properties of the shorthand:
+		column-width: auto
+		column-count: auto
+		Applies to	non-replaced block elements (except table elements), table-cell or inline-block elements
+		Inherited	no
+		Media	visual
+		Computed value	as each of the properties of the shorthand:
+		column-width: the absolute length, zero or larger
+		column-count: as specified
+		Animatable	as each of the properties of the shorthand:
+		column-width: yes, as a length
+		column-count: yes, as an integer
+		Canonical order	order of appearance in the formal grammar of the values
+		Syntax
+		columns: 1em;
+		columns: 1;
+		columns: auto;
+		columns: 1 auto;
+		columns: auto 12em;
+		columns: auto auto;
+		Values
+
+		<'column-width'>
+		Is a &lt;length> value giving a hint of the optimal width of the column. The actual column width may be wider (to fill the available space), or narrower (only if the available space is smaller than the specified column width). The length must be strictly positive or the declaration is invalid.
+	</section>
 
 </body>
 </html>
