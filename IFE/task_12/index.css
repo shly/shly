@@ -1,22 +1,24 @@
-section{
-	margin-top:20px;
-}
-.part1 table th{
-	background-color: #000000;
-	color: #FFFFFF;
-}
-.part1 table tbody tr:nth-child(2n){
-	background-color: #ccc;
-}
-.part1 table tbody tr:nth-child(-n+3){
-	color: red;
-}
-.part2 input{
-	width: 200px;
-	height: 20px;
-	border: 1px solid #CCC;
-	transition: width .2s;
-}
+@charset "UTF-8";
+section {
+  margin-top: 20px; }
+
+.part1 table th {
+  background-color: #000000;
+  color: #FFFFFF; }
+
+.part1 table tbody tr:nth-child(2n) {
+  background-color: #ccc; }
+
+.part1 table tbody tr:nth-child(-n+3) {
+  color: red; }
+
+.part2 input {
+  width: 200px;
+  height: 20px;
+  border: 1px solid #CCC;
+  -webkit-transition: width .2s;
+  transition: width .2s; }
+
 /*使用动画的方式完成
 @keyframes widthchange{
 	from {
@@ -58,77 +60,74 @@ section{
 	-o-animation:widthchange 2s;
 }*/
 /*使用过渡的方式完成宽度的变化*/
-.part2 input:focus{
-	width: 300px;
-	transition: width 1s;
-}
-.banner{
-	width: 200px;
-	height: 200px;
-	position: relative;
-	overflow: hidden;
-}
-.part3 img{
-	width: 200px;
-	height: 200px;
-}
-.show_image{
-	width: 300%;
-	height: 100%;
-	position: relative;
-	transition: left .8s ease;
-	left: 0;
-	top: 0;
-	font-size: 0;/*为了让内部的inline-block之间没有空隙*/
-}
-.show_image span{
-	display: inline-block;
-	width: 200px;
-	height: 200px;
-}
+.part2 input:focus {
+  width: 300px;
+  -webkit-transition: width 1s;
+  transition: width 1s; }
+
+.banner {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden; }
+
+.part3 img {
+  width: 200px;
+  height: 200px; }
+
+.show_image {
+  width: 300%;
+  height: 100%;
+  position: relative;
+  -webkit-transition: left .8s ease;
+  transition: left .8s ease;
+  left: 0;
+  top: 0;
+  font-size: 0;
+  /*为了让内部的inline-block之间没有空隙*/ }
+
+.show_image span {
+  display: inline-block;
+  width: 200px;
+  height: 200px; }
 
 #img_1:target ~ .show_image {
-    left: 0;
-}
+  left: 0; }
 
 #img_2:target ~ .show_image {
-    left: -100%;
-}
+  left: -100%; }
 
 #img_3:target ~ .show_image {
-    left: -200%;
-}
+  left: -200%; }
 
-.bannerbar{
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
-	font-size: 0px;
-}
-.bannerbar a{
-	text-decoration:none;
-	font-size: 16px;
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	text-align: center;
-	background-color: rgba(255,255,255,0.5);
-	color: #ffffff;
-	margin-left: 3px;
-	cursor: pointer;
-}
-section.part4{
-	border:2px solid #888;
-	width: 900px;
-	height: 500px;
-	columns: 300px 3;
-    column-fill: auto;
-    -webkit-columns: 300px 3;
-    -webkit-column-fill: auto;
-    -o-columns: 300px 3;
-    -o-column-fill: auto;
-	/*column-gap: 30px;*/
-	column-rule: 1px dotted #ccc;
-}
+.bannerbar {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 0px; }
 
+.bannerbar a {
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  margin-left: 3px;
+  cursor: pointer; }
 
+section.part4 {
+  border: 2px solid #888;
+  width: 900px;
+  height: 500px;
+  -webkit-columns: 300px 3;
+     -moz-columns: 300px 3;
+          columns: 300px 3;
+  -webkit-column-fill: auto;
+     -moz-column-fill: auto;
+          column-fill: auto;
+  -webkit-column-rule: 1px dotted #ccc;
+     -moz-column-rule: 1px dotted #ccc;
+          column-rule: 1px dotted #ccc; }
