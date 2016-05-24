@@ -1,5 +1,5 @@
 $(function(){
-	if(location.pathname.length==1){
+	/*if(location.pathname.length==1){
 		var state = {
 				url:"/IFE/index.html",
 				subfolder:"IFE"
@@ -26,7 +26,7 @@ $(function(){
         var currentClass = "."+history.state.subfolder;
         $(currentClass).addClass("current").parent("li").siblings().children("a").removeClass("current");
 
-	});
+	});*/
 	/*以下为catalog*/
 	var temp = '<em class="node-edge start"></em><dl>';
 	$.each($(".catalog h2"),function(i,n){
