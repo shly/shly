@@ -122,7 +122,11 @@ section.part4{
 	width: 900px;
 	height: 500px;
 	columns: 300px 3;
-	/*column-fill: auto;*/
+    column-fill: auto;
+    -webkit-columns: 300px 3;
+    -webkit-column-fill: auto;
+    -o-columns: 300px 3;
+    -o-column-fill: auto;
 	/*column-gap: 30px;*/
 	column-rule: 1px dotted #ccc;
 }
