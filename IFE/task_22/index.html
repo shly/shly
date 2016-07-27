@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+	div
+	{
+		width:100px;
+		height:100px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		background:red;
+		animation:myfirst linear 5s;
+		/* animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-play-state: running; */
+		-moz-animation:myfirst linear 5s; /* Firefox */
+		/* -moz-animation-iteration-count: infinite;
+		-moz-animation-direction: alternate;
+		-moz-animation-play-state: running; */
+		-webkit-animation:myfirst linear 5s; /* Safari and Chrome */
+		/* -webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: alternate;
+		-webkit-animation-play-state: running; */
+		-o-animation:myfirst linear 5s; /* Opera */
+		/* -o-animation-iteration-count: infinite;
+		-o-animation-direction: alternate;
+		-o-animation-play-state: running; */
+		
+	
+	}
+
+@keyframes myfirst
+{
+	0% {
+		background:red;
+		left: 0px;
+		transform: rotate(0deg);
+	}
+	30%{
+		background:yellow;
+		transform: rotate(360deg);
+		left: 300px;
+	}
+	60% {
+		background:yellow;
+		transform: rotate(720deg);
+		left: 600px;
+	}
+	100% {
+		background:red;
+		transform: rotate(1080deg);
+		left: 1000px;
+	}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0% {
+		background:red;
+		left: 0px;
+		transform: rotate(0deg);
+	}
+	30%{
+		background:yellow;
+		transform: rotate(360deg);
+		left: 300px;
+	}
+	60% {
+		background:yellow;
+		transform: rotate(720deg);
+		left: 600px;
+	}
+	100% {
+		background:red;
+		transform: rotate(1080deg);
+		left: 1000px;
+	}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0% {
+		background:red;
+		left: 0px;
+		transform: rotate(0deg);
+	}
+	30%{
+		background:yellow;
+		transform: rotate(360deg);
+		left: 300px;
+	}
+	60% {
+		background:yellow;
+		transform: rotate(720deg);
+		left: 600px;
+	}
+	100% {
+		background:red;
+		transform: rotate(1080deg);
+		left: 1000px;
+	}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0% {
+		background:red;
+		left: 0px;
+		transform: rotate(0deg);
+	}
+	30%{
+		background:yellow;
+		transform: rotate(360deg);
+		left: 300px;
+	}
+	60% {
+		background:yellow;
+		transform: rotate(720deg);
+		left: 600px;
+	}
+	100% {
+		background:red;
+		transform: rotate(1080deg);
+		left: 1000px;
+	}
+}
+</style>
+</head>
+<body>
+<div>DF</div>
+SDFASF
+SDFASF
+SDFASF
+
+
+
+</body>
+</html>
