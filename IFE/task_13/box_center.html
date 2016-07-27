@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多元素水平居中</title>
+	<style type="text/css">
+		.container{
+		    text-align: center;
+		}
+		.box{
+			display: inline-block;/*ie8及以上*/
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			text-align: center;
+			border: 1px solid black;
+			*display:inline;/*hank IE*/ 
+			*zoom:1;/*hank IE*/
+		}
+		.container_flex{
+			display: flex;
+			display: -webkit-flex;
+			justify-content: center;
+		}
+		.box_flex{
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			text-align: center;
+			border: 1px solid black;
+			margin: 10px;
+
+		}
+	</style>
+</head>
+<body>
+	<!-- 	<div class="container">
+	<div class="box">A</div>
+	<div class="box">B</div>
+	<div class="box">C</div>
+	<div class="box">D</div>
+	</div>
+	-->
+	<div class="container_flex">
+		<div class="box_flex">A</div>
+		<div class="box_flex">B</div>
+		<div class="box_flex">C</div>
+		<div class="box_flex">D</div>
+	</div>
+</body>
+</html>
