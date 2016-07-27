@@ -94,8 +94,14 @@ header{
 	height: 30px;
 	line-height: 30px;
 }
+.task ul li a{
+	transition: color 0.2s;
+	transition: padding-left 0.2s;
+}
 .task ul li a:hover{
 	color:#000000;
+	/* font-size: 15px; */
+	padding-left: 10px;
 }
 .task h2{
 	padding: 5px;
