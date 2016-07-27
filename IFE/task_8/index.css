@@ -1,4 +1,5 @@
-html,body,.container{
+.container{
+	overflow: hidden;/* BFC */
 	width: 100%;
 	max-width : 1200px;
 	box-sizing: border-box;
@@ -54,4 +55,25 @@ div.col-content{
 	.col-sm-12{
 		width: 100%;
 	}
+}
+.flex_box{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap; 
+	flex-direction: column;
+	width: 650px;
+	height: 520px;
+	border: 1px solid black;
+}
+.box{
+	border: 1px solid black;
+	height: 250px;
+	margin: 5px;
+	width: 30%;
+	border-radius: 15px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.box:first-child {
+	height: 507px;
 }
