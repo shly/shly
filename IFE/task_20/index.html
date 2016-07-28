@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS描绘三角形</title>
+	<style type="text/css">
+		.border-example{
+			width: 0px;
+			height: 0px;
+			border:50px solid;
+			border-color: red purple green yellow;
+
+		}
+		.arrow-up{
+			width: 0px;
+			height: 0px;
+			border:50px solid transparent;
+			border-bottom-color: green;
+		}
+		.arrow-right{
+			width: 0px;
+			height: 0px;
+			border:50px solid transparent;
+			border-left-color: yellow;
+		}
+		.arrow-down{
+			width: 0px;
+			height: 0px;
+			border:50px solid transparent;
+			border-top-color: red;
+		}	
+		.arrow-left{
+			width: 0px;
+			height: 0px;
+			border:50px solid transparent;
+			border-right-color: purple;
+		}
+	</style>
+</head>
+<body>
+<p>
+	看下用css画三角形的原理：当一个div的宽和高都是0时，只设置边的宽度和颜色，显示如下：
+</p>
+<div class="border-example"></div>
+<p>可以看到每个边都是三角形，故三角形的实现如下：</p>
+<ol>
+	<li>
+		上三角形，即保留绿色部分,设置其他边透明：
+		<div class="arrow-up"></div>
+
+	</li>
+	<li>
+		右三角形，即保留黄色部分,设置其他边透明：
+		<div class="arrow-right"></div>
+
+	</li>
+	<li>
+		左三角形，即保留紫色部分,设置其他边透明：
+		<div class="arrow-left"></div>
+
+	</li>
+	<li>
+		下三角形，即保留红色部分,设置其他边透明：
+		<div class="arrow-down"></div>
+
+	</li>
+</ol>
+
+	
+</body>
+</html>
