@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<title>清除浮动</title>
 	<style type="text/css">
+		*::selection{
+			color: #FFF;
+			background-color: #000;
+		}
 		p{
 			text-indent: 2em;
 		}
@@ -23,6 +27,7 @@
 			clear: both; 
 			visibility: hidden;
 		}
+		
 	
 	</style>
 </head>
@@ -35,13 +40,13 @@
 	<ol>
 		<li>父元素设置float：容易对其他布局造成影响</li>
 		<li>在父元素的末尾添加一个空div，并为空div设置样式：clear:both 缺点是产生多余的标签</li>
-		<li>给父元素添加:after伪类，并设置"content:"";display:block;height:0px;clear:both;visibility: hidden;"
+		<li>给父元素添加:after伪元素，并设置"content:"";display:block;height:0px;clear:both;visibility: hidden;"
 		</li>
 		<li>给父元素添加“overflow:hidden”:原理触发BFC</li>
 	</ol>
 </p>
 <p>
-	下面是例子：
+	下面是个清除浮动的例子：
 </p>
 <div class="container">
 	<div class="box">盒子一</div>
