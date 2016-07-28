@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动</title>
+	<style type="text/css">
+		p{
+			text-indent: 2px;
+		}
+		.container{
+			border: 1px solid red;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			float: left;
+		}
+		.container:after{
+			content: "020"; 
+			display: block; 
+			height: 0; 
+			clear: both; 
+			visibility: hidden;
+		}
+	
+	</style>
+</head>
+<body>
+<p>
+	在非IE浏览器（如Firefox）下，当容器的高度为auto，且容器的内容中有浮动（float为left或right）的元素，在这种情况下，容器的高度不能自动伸长以适应内容的高度，使得内容溢出到容器外面而影响（甚至破坏）布局的现象。这个现象叫浮动溢出，为了防止这个现象的出现而进行的CSS处理，就叫CSS清除浮动。
+</p>
+<p>
+	清除浮动有三种方式：
+	<ol>
+		<li>父元素设置float：容易对其他布局造成影响</li>
+		<li>在父元素的末尾添加一个空div，并为空div设置样式：clear:both 缺点是产生多余的标签</li>
+		<li>给父元素添加:after伪类，并设置"content:"";display:block;height:0px;clear:both;visibility: hidden;"
+		</li>
+		<li>给父元素添加“overflow:hidden”:原理触发BFC</li>
+	</ol>
+</p>
+<p>
+	下面是例子：
+</p>
+<div class="container">
+	<div class="box">盒子一</div>
+	<div class="box">盒子二</div>
+	<div class="box clear">盒子三</div>
+	
+</div>
+
+	
+</body>
+</html>
