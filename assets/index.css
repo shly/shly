@@ -5,6 +5,7 @@ html,body{
 	font-size: 14px;
 	color: #333333;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	background-image: url("img/bg.jpg");
 }
 h1,h2{
 	margin: 0px;
